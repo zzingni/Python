@@ -1,63 +1,32 @@
 
-print('인하')
-print("공업")
-# print("전문') 에러
 
-print('"인"하') # "인"하
-print("'인'하") # '인'하
-print("\"인\"하") # "인"하
+mymajor = "컴퓨터정보"
+print(mymajor[0:3]) # 컴퓨터
+print(mymajor[1:3]) # 퓨터
+print(mymajor[2:3]) # 터
+print(mymajor[:3]) # 컴퓨터
+print(mymajor[3:5]) # 정보
+print(mymajor[:]) # 컴퓨터정보
+print(mymajor[0:5:2]) # 컴터보
+print(mymajor[0:5:1]) # 컴퓨터정보
+print(mymajor) # 컴퓨터정보 / 슬라이싱 해도 원본은 변경 안 됨.
 
-print(
-    """\
-인
-하"""
-)
-print()
 
-print(
-    """
-인
-하"""
-)
-print()
 
-print(
-    """인
-하"""
-)
-print("""인
-         하""")
-print()
+mymajor = "컴퓨터정보"
+# print(mymajor[-6])
+print(mymajor[-5])
+print(mymajor[-4])
+print(mymajor[-3])
+print(mymajor[-2])
+print(mymajor[-1])
+print(mymajor[0])
+print(mymajor[1])
+print(mymajor[2])
+print(mymajor[3])
+print(mymajor[4])
 
-a = 1   # 리터럴로 표시, 약식 표현
-a1 = int(1)  # 생성자로 값을 표현(정식)
+print("=-" * 30)
 
-b = 1.1
-b1 = float(1.1)
-
-c = "1"
-c1 = str("1")
-
-print(type(a), type(a1), a==a1)  # <class 'int'> <class 'int'> True
-print(type(b), type(b1), a==a1)  # <class 'float'> <class 'float'> True
-print(type(c), type(c1), a==a1)  # <class 'str'> <class 'str'> True
-
-print(1+1)
-
-# 하나만 출력합니다.
-print("# 하나만 출력합니다.")
-print("Hello Python Programming...!")
-print()
-
-# 여러 개를 출력합니다.
-print("# 여러 개를 출력합니다.")
-print(10, 20, 30, 40, 50)
-print("안녕하세요","저의","이름은","윤인성입니다!")
-print()
-
-# 아무것도 입력하지 않으면 단순하게 줄바꿈합니다.
-print("# 아무것도 출력하지 않습니다. ")
-print("===확인 전용선---")
-print()
-print()
-print("---확인전용선---")
+print(20+20)
+print("나이:" + "20")

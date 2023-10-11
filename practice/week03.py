@@ -1,9 +1,9 @@
 
 
-num1 = int(input("1st:"))
-num2 = int(input("2nd:"))
-num3 = int(input("3rd:"))
+my_school = "inha"
 
-avg = (num1 + num2 + num3)/3
+length = len(my_school)
+print(length)
 
-print(str(num1) + "," + str(num2) + "," + str(num3) + "의 평균은" + str(avg)[:4] + "입니다.")
+print(my_school[0])
+print(my_school[1:len(my_school)])

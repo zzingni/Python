@@ -1,6 +1,9 @@
 
 
-number = input("주민등록번호(예제:001212-3456789):")
+num1 = int(input("1st:"))
+num2 = int(input("2nd:"))
+num3 = int(input("3rd:"))
 
-print("연월일:", number[0:6])
-print("성별:", number[7])
+avg = (num1 + num2 + num3) / 3
+
+print(str(num1) + "," + str(num2) + "," + str(num3) + "의 평균은" + str(avg)[:4] + "입니다.")

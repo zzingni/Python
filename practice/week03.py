@@ -1,4 +1,17 @@
 
+a = 1   # 리터럴로 표시, 약식 표현
+a1 = int(1)  # 생성자로 값을 표현(정식)
+
+b = 1.1
+b1 = float(1.1)
+
+c = "1"
+c1 = str("1")
+
+print(type(a), type(a1), a==a1)  # <class 'int'> <class 'int'> True
+print(type(b), type(b1), a==a1)  # <class 'float'> <class 'float'> True
+print(type(c), type(c1), a==a1)  # <class 'str'> <class 'str'> True
+
 print(1+1)
 
 # 하나만 출력합니다.

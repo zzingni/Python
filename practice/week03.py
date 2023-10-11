@@ -1,5 +1,23 @@
 
 
+print(not True)
+print(not False)
+
+print(5 < 10 and 5 < 3) # False
+print(5 < 10 or 5 < 3)  # True
+
+print("#" * 30)
+
+a = 2
+b = 10
+
+print(a < 5 < 10)   # True
+print(a < b < 5)    # False
+
+print(True)
+print(False)
+print(type(True))
+
 age = int(input("올해 나이: "))
 print("내년 나이:", age+1)
 

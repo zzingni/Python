@@ -1,53 +1,27 @@
 
 
-number = int(input("정수:"))
+stu_1 = [202344069, "김인하", "컴정", 20]
+stu_2 = [202344000, "이인하", "컴정", 20]
 
-if number > 0:
-    print("양수")
-else:
-    print("음수 or 0")
+print(stu_2[1][0]) # "이"
+print(str(stu_2[0])[:4])    # 2023
 
-reg_nuber = input("주민등록번호: ")
-gender_number = int(reg_nuber[7])
+a = ["hiimjiuen"]
+ac = a[:4]
+print(type(ac)) # 리스트의 슬라이싱 값은 리스트!!!!
 
-# if str(gender_number) in "1357":
-#    print("남자")
+print("학번", type(stu_1[0]), stu_2[0]) # 인덱싱 값은 인덱싱 한 자료형에 따라 다름.
+print("이름", type(stu_1[1]), stu_2[1])
 
-if gender_number %  2 == 1:
-    print("남자")
-else:
-    print("여자")
+test_list = list()
+print(test_list, type(test_list))
+
+test_list = []
+print(test_list, type(test_list))
 
 
-number = int(input("정수:"))
+test_list = ["권지은", 25, 166.6]
+print(test_list)
 
-if number > 0:
-    print("양수")
-
-if number < 0:
-    print("음수")
-
-if number == 0: # 검사를 3번 하는 코드
-    print("0")
-
-raw_input = input("inch 단위의 숫자를 입력해주세요: ")
-
-inch = int(raw_input)
-cm = inch * 2.54
-
-print(inch, "inch는 cm 단위로", cm, "cm입니다.")
-
-string ="안녕하세요"
-string += "!"
-string += "!"
-print("string:", string)
-
-int_a = int(52)
-int_a1 = int("52")
-float_a = float(27.2)
-float_a1 = float("27.2")
-
-print(type(int_a), int_a)
-print(type(int_a1), int_a1)
-print(type(float_a), float_a)
-print(type(float_a1), float_a1)
+for data in test_list:
+    print(test_list) # test_list안의 개수만큼 for문 반복됨, 4번 출력.

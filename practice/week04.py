@@ -1,4 +1,16 @@
 
+
+number = int(input("정수:"))
+
+if number > 0:
+    print("양수")
+
+if number < 0:
+    print("음수")
+
+if number == 0: # 검사를 3번 하는 코드
+    print("0")
+
 raw_input = input("inch 단위의 숫자를 입력해주세요: ")
 
 inch = int(raw_input)

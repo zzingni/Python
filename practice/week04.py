@@ -1,14 +1,22 @@
 
 
+number = int(input("정수:"))
 
-reg_nuber = input("주민등록번호")
-gender_number = int(reg_nuber[6])
+if number > 0:
+    print("양수")
+else:
+    print("음수 or 0")
 
-if str(gender_number) in "1357":
-    print("남자")
+reg_nuber = input("주민등록번호: ")
+gender_number = int(reg_nuber[7])
+
+# if str(gender_number) in "1357":
+#    print("남자")
 
 if gender_number %  2 == 1:
     print("남자")
+else:
+    print("여자")
 
 
 number = int(input("정수:"))

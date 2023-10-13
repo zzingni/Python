@@ -1,47 +1,30 @@
 
 
-
-a = "string"
-a[0] # s
-
-b = [1,2,3]
-b[0] # 1
-
 infos = {
-    "202300001":{"name" : "kim inha", "age" : 21},
-    "202300002":{"name" : "choi comjung", "age" : 22, "major":"컴퓨터정보"}
+    "202300001":{"name":"kim inha", "age":21},
+    "202300002":{"name":"choi comjung", "age":22, "major":"컴퓨터정보"}
 }
 
-print(infos["202300002"]["major"])
+infos["202300003"] = {} # 빈 딕셔너리 생성
 
-infos = {1:["kim iniha", 21], 2:["choi comjung", 22]}
-infos[2] # ['choi comjung', 22]
-print(infos[2][1])
+infos["202300003"]["name"] = "yi comsi"
+infos["202300003"]["major"] = "컴퓨터 시스템"
 
-
-info_a = {"name" : "kim inha", "age" : 21}
-info_b = {"name" : "choi comjung", "age" : 22}
-
-# print(info_a[0]) # 키 에러 / 인덱스로 접근 불가 / 딕셔너리는 순번 없음
-# print(info_a[name]) # 네임 에러 / name 이라는 변수 없음
-# print(info_a["이름"]) # 키 에러
-
-print(info_a['name'])
-print(info_a['age'])
-
-
-
-test_dict = {
-    "one" : 1,
-    "one" : 5, # key 값이 동일하면 덮어씌어짐.
-    "two" : 2,
-    "three" : 3
+infos["202300004"] = {
+    "name":"wang jeonja",
+    "major": "전자"
 }
 
-print(test_dict)
+print(infos)
 
-test_dict = dict()
-print(test_dict, type(test_dict))
 
-test_dict = {}
-print(test_dict, type(test_dict))
+test_dict = {1: "uno", 2:"two", 3:"three"}
+
+test_dict[5] = "five"
+print(test_dict)    # {1: "uno", 2:"two", 3:"three", 5:"five"}
+
+test_dict[1] = "one"
+print(test_dict)    # {1: "one", 2:"two", 3:"three", 5:"five"}
+
+del test_dict[2]
+print(test_dict)    # {1: "one", 3:"three", 5:"five"}

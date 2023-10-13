@@ -5,26 +5,14 @@ infos = {
     "202300002":{"name":"choi comjung", "age":22, "major":"컴퓨터정보"}
 }
 
-infos["202300003"] = {} # 빈 딕셔너리 생성
+number = input("학번:")
+# print(infos[number])
 
-infos["202300003"]["name"] = "yi comsi"
-infos["202300003"]["major"] = "컴퓨터 시스템"
+info = infos.get(number, "학번이 없어요")
+print(info)
+print()
 
-infos["202300004"] = {
-    "name":"wang jeonja",
-    "major": "전자"
-}
-
-print(infos)
-
-
-test_dict = {1: "uno", 2:"two", 3:"three"}
-
-test_dict[5] = "five"
-print(test_dict)    # {1: "uno", 2:"two", 3:"three", 5:"five"}
-
-test_dict[1] = "one"
-print(test_dict)    # {1: "one", 2:"two", 3:"three", 5:"five"}
-
-del test_dict[2]
-print(test_dict)    # {1: "one", 3:"three", 5:"five"}
+if number in infos: # keys() 메소드 쓰지 않아도 기본적으로 키 값에서 찾아줌
+    print(infos[number])
+else:
+    print("학번이 없습니다.")

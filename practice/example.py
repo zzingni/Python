@@ -1,9 +1,11 @@
 
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+pets = [
+    {"name" : "구름", "age" : 5},
+    {"name" : "초코", "age" : 3},
+    {"name" : "아지", "age" : 1},
+    {"name" : "호랑이", "age" : 1}
+]
 
-for i in range(0, len(numbers) // 2):
-    j = i + (i + 1)
-    print(f"i = {i}, j = {j}")
-    numbers[j] = numbers[j] ** 2
-print(numbers)
+for value in pets:
+    print(f"{value['name']} {value['age']}살")

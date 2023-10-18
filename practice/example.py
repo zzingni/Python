@@ -1,10 +1,23 @@
 
 
-numbers = [1,2,6,8,4,3,2,1,1,3,7,8,9,5,3,3,2,2,2,3,5,6]
-counter = {}
+character = {
+    "name": "기사",
+    "level" : 12,
+    "items" : {
+        "sword": "불꽃의 검",
+        "armor" : "풀플레이트",
+    },
+    "skill":["베기", "세게 베기", "아주 세게 베기"] 
+}
 
-for number in numbers:
-    if number not in counter:
-        counter[number] = 0
-    counter[number] += 1 # key값 생성 후 그 값도 +1 해줘야함. else 말고 if 밖에서 +=1 필요!
-print(counter)
+for key in character:
+    if type(character[key]) is dict:
+        for v in character[key].values():
+            print(f"{key} : {v}")
+    elif type(character[key]) is list:
+        for v in range(len(character[key])):
+            print(f"{key} : {character[key][v]}")
+    else:
+        print(f"{key} : {character[key]}")
+
+

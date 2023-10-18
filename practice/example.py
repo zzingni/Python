@@ -1,35 +1,21 @@
 
+# 나누어 떨어지는 숫자
+# 숫자를 입력하면 그 숫자가 2,3,4,5로 나누어 떨어지는지 확인하고 출력하는 프로그램
 
-# 간단한 대화 프로그램
-
-import datetime
-
-now = datetime.datetime.now()
-hour = now.hour
 
 while True:
-    user = input("입력: ")
-    if "안녕" in user:
-        print("안녕하세요.")
-        answer = input("계속 하시겠습니까?(y,n) ")
-        if answer.upper() == "Y":
-            continue
-        else:
-            break
-    elif "몇 시" in user:
-        print(f"지금은 {hour}시입니다.") # print(f{user}) > 오류. f-string은 문자열과 함께 사용해야 쓸 수 없음. 변수명만 쓸 때는 오류.
-        answer = input("계속 하시겠습니까?(y,n) ")
-        if answer.upper() == "Y":
-            continue
-        else:
-            break
+    number = int(input("정수를 입력해주세요: "))
+    if type(number) != int:
+        print("정수를 입력해주세요!")
     else:
-        print(user)
-        answer = input("계속 하시겠습니까?(y,n) ")
-        if answer.upper() == "Y":
-            continue
-        else:
-            break
-
-
-        
+        for i in range(2,6):
+            result = number % i
+            if result == 0:
+                print(f"{number}은 {i}로 나누어 떨어지는 숫자입니다.")
+            else:
+                print(f"{number}은 {i}로 나누어 떨어지는 숫자가 아닙니다.")
+    q = input("계속하시겠습니까?(y,n) ")
+    if q.upper() == "Y":
+        continue
+    else:
+        break

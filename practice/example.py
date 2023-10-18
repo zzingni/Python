@@ -1,23 +1,18 @@
 
 
-character = {
-    "name": "기사",
-    "level" : 12,
-    "items" : {
-        "sword": "불꽃의 검",
-        "armor" : "풀플레이트",
-    },
-    "skill":["베기", "세게 베기", "아주 세게 베기"] 
-}
+user = int(input("도형 선택(1:사각, 2:삼각, 3:원) : "))
 
-for key in character:
-    if type(character[key]) is dict:
-        for v in character[key].values():
-            print(f"{key} : {v}")
-    elif type(character[key]) is list:
-        for v in range(len(character[key])):
-            print(f"{key} : {character[key][v]}")
-    else:
-        print(f"{key} : {character[key]}")
-
+if user == 1:
+    x = int(input("가로 입력 :"))
+    y = int(input("세로 입력 :"))
+    print("도형의 넓이 =", x * y)
+elif user == 2:
+    x = float(input("밑변 입력 :"))
+    y = float(input("높이 입력 :"))
+    print(f"도형의 넓이 = {0.5*x*y:.2f}")
+elif user == 3:
+    x = float(input("반지름 입력 :"))
+    print(f"도형의 넓이 = {3.14*(x ** 2):.2f}")
+else:
+    print("잘못된 입력입니다.")
 

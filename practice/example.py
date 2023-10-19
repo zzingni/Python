@@ -1,18 +1,26 @@
 
 
-user = int(input("도형 선택(1:사각, 2:삼각, 3:원) : "))
+alien_0 = {'color': 'green', 'points':5}
+alien_1 = {'color': 'red', 'points':15}
+alien_2 = {'color': 'blue', 'points':20}
 
-if user == 1:
-    x = int(input("가로 입력 :"))
-    y = int(input("세로 입력 :"))
-    print("도형의 넓이 =", x * y)
-elif user == 2:
-    x = float(input("밑변 입력 :"))
-    y = float(input("높이 입력 :"))
-    print(f"도형의 넓이 = {0.5*x*y:.2f}")
-elif user == 3:
-    x = float(input("반지름 입력 :"))
-    print(f"도형의 넓이 = {3.14*(x ** 2):.2f}")
-else:
-    print("잘못된 입력입니다.")
+aliens = [alien_0, alien_1, alien_2]
 
+for idx in range(len(aliens)):
+    print(f"{idx+1}번 외계인 색상: {aliens[idx]['color']}")
+
+for idx, alien in enumerate(aliens):
+    print(f"{idx+1}번 외계인 점수: {alien['points']}")
+
+
+students = {
+    '12210001': {'name': '김인하', 'major':'컴퓨터'},
+    '12210011': {'name': '김슈슉', 'major':'전자'},
+    '12210111': {'name': '김슈욱', 'major':'물류'}
+            }
+
+for number, student in students.items():
+    print(f"학번:{number}")
+    print(f"이름:{student['name']}")
+    print(f"전공:{student['major']}")
+    print()

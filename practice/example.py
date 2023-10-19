@@ -1,10 +1,13 @@
 
-limit = 10000
-i = 1
 
-sum_value = 0
+max_value = 0
+a = 0
+b = 0
 
-while sum_value <= 10000:
-    sum_value += i
-    i += 1
-print(f"{i-1}를 더할 때 {limit}를 넘으며 그때의 값은 {sum_value}입니다.")
+for i in range(1,100):
+    j = 100 - i
+    if j * i > max_value:
+        a = j
+        b = i
+        max_value = j * i
+print(f"최대가 되는 경우: {a} * {b} = {max_value}")

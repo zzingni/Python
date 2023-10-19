@@ -1,26 +1,22 @@
 
 
-alien_0 = {'color': 'green', 'points':5}
-alien_1 = {'color': 'red', 'points':15}
-alien_2 = {'color': 'blue', 'points':20}
+bibimbap = {
+    '양념' : '고추장',
+    '고명' : ['버섯', '계란', '콩나물', '시금치', '육회']
+}
 
-aliens = [alien_0, alien_1, alien_2]
+print(f"당신이 주문한 비빔밥의 양념은 {bibimbap['양념']}이고, 고명은 ", end="")
+print(",".join(bibimbap['고명']), end=" 입니다.\ㅜ")
 
-for idx in range(len(aliens)):
-    print(f"{idx+1}번 외계인 색상: {aliens[idx]['color']}")
+fav_fruits = {
+    '김인하' : ['딸기', '오렌지'],
+    '이물류' : ['귤', '무화과'],
+    '최컴정' : ['복숭아', '귤', '배'],
+    '박정석' : ['키위', '자두']
+}
+print()
 
-for idx, alien in enumerate(aliens):
-    print(f"{idx+1}번 외계인 점수: {alien['points']}")
-
-
-students = {
-    '12210001': {'name': '김인하', 'major':'컴퓨터'},
-    '12210011': {'name': '김슈슉', 'major':'전자'},
-    '12210111': {'name': '김슈욱', 'major':'물류'}
-            }
-
-for number, student in students.items():
-    print(f"학번:{number}")
-    print(f"이름:{student['name']}")
-    print(f"전공:{student['major']}")
-    print()
+for name, fruits in fav_fruits.items():
+    print(f"{name}이 좋아하는 과일은 아래와 같습니다.")
+    for fruit in fruits:
+        print(f"\t{fruit}")

@@ -1,22 +1,10 @@
 
 
-bibimbap = {
-    '양념' : '고추장',
-    '고명' : ['버섯', '계란', '콩나물', '시금치', '육회']
-}
+key_list = ["name", "hp", "mp", "level"]
+value_list = ["기사", 200, 30, 5]
+character = {}
 
-print(f"당신이 주문한 비빔밥의 양념은 {bibimbap['양념']}이고, 고명은 ", end="")
-print(",".join(bibimbap['고명']), end=" 입니다.\ㅜ")
-
-fav_fruits = {
-    '김인하' : ['딸기', '오렌지'],
-    '이물류' : ['귤', '무화과'],
-    '최컴정' : ['복숭아', '귤', '배'],
-    '박정석' : ['키위', '자두']
-}
-print()
-
-for name, fruits in fav_fruits.items():
-    print(f"{name}이 좋아하는 과일은 아래와 같습니다.")
-    for fruit in fruits:
-        print(f"\t{fruit}")
+for i, key in enumerate(key_list):
+    character[key] = value_list[i]
+print(character)
+    
